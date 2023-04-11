@@ -1,0 +1,37 @@
+body{
+
+    background-color: black;
+    font-size: large;
+}
+
+h1{
+
+    color: white; 
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+p{
+
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+div{
+
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+h5{
+
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
