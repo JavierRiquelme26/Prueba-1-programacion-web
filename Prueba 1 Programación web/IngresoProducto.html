@@ -15,7 +15,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand col-md-6" href="#">
                 <img src="icono.jpg" alt="No disponible" width="20%"
                 heigth="20%">
                 Fundación Animales Equipados
@@ -55,7 +55,6 @@
                     </a>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="IngresoProducto.html">Ingresar Producto</a></li>
-                      <li><a class="dropdown-item" href="EliminarProducto.html">Eliminar Producto</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="BuscarProducto.html">Buscar Producto</a></li>
                     </ul>
@@ -63,14 +62,7 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="Seguimiento.html">Pedidos</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                  </li>
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
               </div>
             </div>
           </nav>
@@ -80,8 +72,8 @@
             <h1 class="text-center mt-5">Ingresa un producto</h1>
 
             <div class="row mt-5">
-                <div class="col-12 col-md-2 offset-md-2">Tipo de producto</div>
-                <div class="col-12 col-md-5">
+                <div class="col-6 col-md-2 offset-md-2">Tipo de producto</div>
+                <div class="col-12 col-md-4">
                     <select name="cmbTipoProducto" class="form-select" id="">
                         <option value="0">Seleccionar</option>
                         <option value="1">Bandana</option>
@@ -92,23 +84,18 @@
             </div>
 
             <div class="row mt-4">
-                <div class="col-12 col-sm-6 col-md-2 offset-md-2">ID producto</div>
-                <div class="col-8 col-md-4"><input type="number" name="txtNombre" class="form-control" ></div>
+                <div class="col-5 col-sm-6 col-md-2 offset-md-2">Descripción</div>
+                <div class="col-12 col-md-4"><input type="text" name="txtNombre" class="form-control" ></div>
             </div>
 
             <div class="row mt-4">
-                <div class="col-12 col-sm-6 col-md-2 offset-md-2">Descripción</div>
-                <div class="col-8 col-md-4"><input type="text" name="txtNombre" class="form-control" ></div>
+                <div class="col-4 col-sm-6 col-md-2 offset-md-2">Stock</div>
+                <div class="col-12 col-md-4"><input type="number" min="1" max="100" name="txtNombre" class="form-control" ></div>
             </div>
 
             <div class="row mt-4">
-                <div class="col-12 col-sm-6 col-md-2 offset-md-2">Stock</div>
-                <div class="col-8 col-md-4"><input type="number" min="1" max="100" name="txtNombre" class="form-control" ></div>
-            </div>
-
-            <div class="row mt-4">
-                <div class="col-12 col-sm-6 col-md-2 offset-md-2">Precio unitario</div>
-                <div class="col-8 col-md-4"><input type="number" name="txtNombre" class="form-control" ></div>
+                <div class="col-5 col-sm-6 col-md-2 offset-md-2">Precio unitario</div>
+                <div class="col-12 col-md-4"><input type="number" name="txtNombre" class="form-control" ></div>
             </div>
 
             <div class="row mt-5">

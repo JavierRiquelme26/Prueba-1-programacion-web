@@ -8,6 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="ValidarRegistroUsuario.js"></script>
 </head>
 <body>
 
@@ -15,7 +17,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand col-md-6" href="#">
           <img src="icono.jpg" alt="No disponible" width="20%"
           heigth="20%">
           Fundación Animales Equipados
@@ -63,14 +65,8 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="Seguimiento.html">Pedidos</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+
         </div>
       </div>
     </nav>
@@ -78,79 +74,83 @@
     <div class="row">
       <h1 class="text-center mt-5">Registro de usuario</h1>
       <div class="row mt-5">
-        <div class="col-12 col-md-2 offset-md-2">Rut</div>
-        <div class="col-8 col-md-4"><input type="text" maxlength="8" class="form-control"></div>
-        <div class="col-4 col-md-1"><input type="text" maxlength="1" class="form-control"></div>
+        <div class="col-5 col-md-2 offset-md-2">Rut</div>
+        <div class="col-8 col-md-5 "><input type="text" name="txtRut" class="txtRut" placeholder="Ej: 20400300" maxlength="8" class="form-control"></div>
+        <div class="col-4 col-md-1"><input type="text" name="txtDv" class="txtDv" placeholder="Ej: K" maxlength="1" size="1" class="form-control"></div>
       </div>
       <div class="row mt-3">
-        <div class="col-12 col-md-2 offset-md-2">Nombre</div>
-        <div class="col-12 col-md-5"><input type="text" class="form-control"></div>
+        <div class="col-5 col-md-2 offset-md-2">Nombre</div>
+        <div class="col-12 col-md-5"><input type="text" name="txtNombre" class="txtNombre" placeholder="Ej: Juan" class="form-control"></div>
       </div>
       <div class="row mt-3">
-        <div class="col-12 col-md-2 offset-md-2">Apellido</div>
-        <div class="col-12 col-md-5"><input type="text" class="form-control"></div>
+        <div class="col-5 col-md-2 offset-md-2">Apellido</div>
+        <div class="col-12 col-md-5"><input type="text" name="txtApellido" class="txtApellido" placeholder="Ej: Díaz" class="form-control"></div>
       </div>
       <div class="row mt-3">
-        <div class="col-12 col-md-2 offset-md-2">Correo</div>
-        <div class="col-12 col-md-5"><input type="text" class="form-control"></div>
+        <div class="col-5 col-md-2 offset-md-2">Correo</div>
+        <div class="col-12 col-md-5"><input type="text" name="txtEmail" class="txtEmail" placeholder="Ej: asdfg@gmail.com" class="form-control"></div>
       </div>
       <div class="row mt-3">
-        <div class="col-12 col-md-2 offset-md-2">Fecha de nacimiento</div>
+        <div class="col-7 col-md-2 offset-md-2">Fecha de nacimiento</div>
         <div class="col-12 col-md-5"><input type="date" class="form-control"></div>
       </div>
       <div class="row mt-3">
-        <div class="col-12 col-md-2 offset-md-2">Teléfono</div>
-        <div class="col-12 col-md-5"><input type="text" maxlength="12" class="form-control"></div>
+        <div class="col-5 col-md-2 offset-md-2">Teléfono</div>
+        <div class="col-12 col-md-5"><input type="text" name="txtTelefono" class="txtTelefono" placeholder="Ej: +56975124796" maxlength="12" class="form-control"></div>
       </div>
       <div class="row mt-3">
-        <div class="col-12 col-md-2 offset-md-2">Región</div>
+        <div class="col-5 col-md-2 offset-md-2">Región</div>
         <div class="col-12 col-md-5">
             <select name="cmbTipoProducto" class="form-select" id="">
                 <option value="0">Seleccionar</option>
-                <option value="1">I</option>
-                <option value="2">II</option>
-                <option value="3">III</option>
-                <option value="4">IV</option>
-                <option value="5">V</option>
-                <option value="6">RM</option>
-                <option value="7">VI</option>
-                <option value="8">VII</option>
-                <option value="9">VIII</option>
-                <option value="10">IX</option>
-                <option value="11">X</option>
-                <option value="12">XI</option>
-                <option value="13">XII</option>
-                <option value="14">XIII</option>
-                <option value="15">XIV</option>
-                <option value="16">XV</option>
+                <option value="1">Región de Tarapacá</option>
+                <option value="2">Región de Antofagasta</option>
+                <option value="3">Región de Atacama</option>
+                <option value="4">Región de Coquimbo</option>
+                <option value="5">Región de Valparaíso</option>
+                <option value="6">Región Metropolitana</option>
+                <option value="7">Región de O'higgins</option>
+                <option value="8">Región del Maule</option>
+                <option value="9">Región del Ñuble</option>
+                <option value="10">Región del BioBio</option>
+                <option value="11">Región de la Araucanía</option>
+                <option value="12">Región de los Ríos</option>
+                <option value="13">Región de los Lagos</option>
+                <option value="14">Región de Aysén</option>
+                <option value="15">Región de Magallanes</option>
+                <option value="16">Región de Arica y Parinacota</option>
             </select>
     </div>
     <div class="row mt-3">
-      <div class="col-12 col-md-2 offset-md-2">Nivel educacional</div>
-      <div class="col-12 col-md-8">
-          <input type="radio" name="Nivel"  class="form-check-input" value="1">Doctor
-          <input type="radio" name="Nivel"  class="form-check-input" value="2">Magíster
-          <input type="radio" name="Nivel"  class="form-check-input" value="3">Profesional
-          <input type="radio" name="Nivel"  class="form-check-input" value="4">Estudiante
-      </div>
+      <div class="col-5 col-md-2 offset-md-2">Nivel educacional</div>
+      <div class="col-12 col-md-5">
+        <select name="cmbTipoProducto" class="form-select" id="">
+            <option value="0">Seleccionar</option>
+            <option value="1">Doctor</option>
+            <option value="2">Magíster</option>
+            <option value="2">Profesional</option>
+            <option value="2">Estudiante</option>
+
+        </select>
+</div>
   </div>
   <div class="row mt-4">
-    <div class="col-12 col-md-2 offset-md-2">Nombre de usuario</div>
-    <div class="col-12 col-md-5"><input type="text" class="form-control"></div>
+    <div class="col-7 col-md-2 offset-md-2">Nombre de usuario</div>
+    <div class="col-12 col-md-5"><input type="text" name="txtUsuario" class="txtUsuario" placeholder="Ej: Alberto_30_1985" class="form-control"></div>
   </div>
   <div class="row mt-4">
-    <div class="col-12 col-md-2 offset-md-2">Contraseña</div>
-    <div class="col-12 col-md-5"><input type="password" class="form-control"></div>
+    <div class="col-5 col-md-2 offset-md-2">Contraseña</div>
+    <div class="col-12 col-md-5"><input type="password" name="txtContraseña" class="txtContraseña" class="form-control"></div>
   </div>
   <div class="row mt-4">
-    <div class="col-12 col-md-2 offset-md-2">Confirme contraseña</div>
-    <div class="col-12 col-md-5"><input type="password" class="form-control"></div>
+    <div class="col-7 col-md-2 offset-md-2">Confirme contraseña</div>
+    <div class="col-12 col-md-5"><input type="password" name="txtconfirmarContraseña" class="txtconfirmarContraseña" class="form-control"></div>
   </div>
   <div class="row mt-5">
     <div class="col-12 col-md-2 offset-md-2"></div>
     <div class="col-12 col-md-5">
-        <input type="submit"  class="btn btn-danger" value="Aceptar">
-        <button class="btn btn-success">Limpiar</button>
+        <input type="submit"  class="btnAceptar" value="Aceptar">
+        <button class="btnLimpiar">Limpiar</button>
     </div>
  </div>  
   </div>
